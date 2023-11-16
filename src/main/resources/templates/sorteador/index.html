@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteador | Index</title>
+</head>
+
+<body>
+    <main>
+        <form action="/sorteador/sortear" method="get">
+            <h1>Sorteador</h1>
+            <div>
+                <label for="i1">De:</label>
+                <input type="number" name="i1" id="i1" required>
+            </div>
+            <div>
+                <label for="i2">Até:</label>
+                <input type="number" name="i2" id="i2" required>
+            </div>
+            <div>
+                <label for="n">Quantidade:</label>
+                <input type="number" name="n" id="n" required>
+            </div>
+            <div>
+                <button type="submit">Sortear</button>
+            </div>
+            <div th:if="${alerta != null}">
+                <h3 style="color: red;" th:text="${alerta}"></h3>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>
