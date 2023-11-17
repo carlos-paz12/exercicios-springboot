@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juros Simples | Index</title>
+</head>
+
+<body>
+    <main>
+        <form action="/juros-simples/calcular" method="get">
+            <h1>Juros Simples</h1>
+            <div>
+                <label for="valorCompra">Valor da compra:</label>
+                <input type="number" name="valorCompra" id="valorCompra" required>
+            </div>
+            <div>
+                <label for="parcelas">Quantidade de parcelas:</label>
+                <input type="number" name="parcelas" id="parcelas" required>
+            </div>
+            <div>
+                <label for="jurosPorcentagem">Taxa juros (em %):</label>
+                <input type="number" name="jurosPorcentagem" id="jurosPorcentagem" required>
+            </div>
+            <div>
+                <button type="submit">Calcular</button>
+            </div>
+            <div th:if="${alerta != null}">
+                <h3 style="color: red;" th:text="${alerta}"></h3>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>
