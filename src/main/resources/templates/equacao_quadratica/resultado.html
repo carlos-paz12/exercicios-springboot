@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equação quadrática</title>
+</head>
+
+<body>
+    <main style="text-align: center">
+        <div th:if="${delta < 0}">
+            <h3>Como delta é menor que 0, essa equação não tem raízes reais</h3>
+        </div>
+        <div th:if="${delta >= 0}">
+            <h3>As raízes dessa equação são</h3>
+            <h2><span th:text="${x1}"></span> e <span th:text="${x2}"></span></h2>
+        </div>
+    </main>
+</body>
+
+</html>
