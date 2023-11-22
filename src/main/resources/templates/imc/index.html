@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Calcular IMC</title>
+        
+        <style>
+            * {
+                font-family: sans-serif;
+            }
+            div {
+                text-align: center;
+            }
+            form {
+                margin: 3rem;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <div>
+                <h1>Calculadora de IMC</h1>
+            </div>
+            <form action="/imc/calcular" method="post">
+                <div>
+                    <label for="massa">Massa:</label>
+                    <input type="number" name="massa" id="massa" step="0.1">                
+                </div>
+                <div>
+                    <label for="altura">Altura:</label>
+                    <input type="number" name="altura" id="altura" step="0.1">             
+                </div>
+                <div>
+                    <input type="submit" value="Calcular"/>
+                </div>
+            </form>            
+        </div>
+    </body>
+
+</html>
